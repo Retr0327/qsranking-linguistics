@@ -1,5 +1,6 @@
 import json
 import aiohttp
+from typing import Awaitable
 from bs4 import BeautifulSoup
 from dataclasses import dataclass
 
@@ -26,7 +27,7 @@ class AJAXURL:
         )
         return jsonified_ajax["qs_rankings_datatables"]["rank_url"]
 
-    async def get_ajax_url(self) -> str:
+    async def get_ajax_url(self) -> Awaitable[str]:
         """The get_ajax_url method gets the AJAX URL.
 
         Returns:

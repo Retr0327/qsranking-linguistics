@@ -1,6 +1,5 @@
 import json
 import aiohttp
-from typing import Dict
 from bs4 import BeautifulSoup
 from dataclasses import dataclass
 

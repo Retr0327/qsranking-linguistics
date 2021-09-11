@@ -14,7 +14,7 @@ class QSRankingData:
 
     year: int
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         self.url = asyncio.run(AJAXURL(self.year).get_ajax_url())
 
     async def download_data(self) -> Awaitable[list[dict[str, str]]]:

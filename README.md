@@ -48,6 +48,28 @@ Download the table as a CSV file by calling the `.to_pickle()` method:
 ```python
 qs_ling.to_pickle()
 ```
+---
+## **Tidbit: Generating tables for multiple years**
+```python
+import asyncio
+import nest_asyncio
+from linguistics_qsranking import LinguisticsRanking
+
+
+nest_asyncio.apply()
+
+
+async def main(year):
+    return LinguisticsRanking(year).download_table()
+
+
+async def download_multiple():      # download table from 2013 to 2021
+    return await asyncio.gather(*[main(year) for year in range(2013, 2022)])
+
+
+asyncio.run(download_multiple())
+
+```
 
 ## Contact Me
 If you have any suggestion or question, please do not hesitate to email me at r07142010@g.ntu.edu.tw

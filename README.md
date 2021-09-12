@@ -1,6 +1,7 @@
 # **QS Rankings for Linguisticse**
 Downloading the ranking data as a table from the website [QS World University Rankings for Linguistics](https://www.topuniversities.com/university-rankings/university-subject-rankings/2021/linguistics). 
- 
+
+> The website does not have information before 2013, so please search from 2013 onwards. 
 
 ## **Documentation**
 

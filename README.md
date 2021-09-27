@@ -50,6 +50,24 @@ qs_ling.to_pickle()
 ```
 ---
 ## **Tidbit: Generating tables for multiple years**
+1. in .py file:
+```python
+import asyncio 
+from linguistics_qsranking import LinguisticsRanking
+
+
+async def main(year):
+    return LinguisticsRanking(year).download_table()
+
+
+async def download_multiple():      # download table from 2013 to 2021
+    return await asyncio.gather(*[main(year) for year in range(2013, 2022)])
+
+
+asyncio.run(download_multiple())
+
+```
+2. in .ipynb file:
 ```python
 import asyncio
 import nest_asyncio

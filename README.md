@@ -54,7 +54,7 @@ qs_ling.to_pickle()
 ### 1. in .py file:
 ```python
 import asyncio 
-from linguistics_qsranking import LinguisticsRanking
+from qslinguistics import LinguisticsRanking
 
 
 async def main(year):
@@ -72,7 +72,7 @@ asyncio.run(download_multiple())
 ```python
 import asyncio
 import nest_asyncio
-from linguistics_qsranking import LinguisticsRanking
+from qslinguistics import LinguisticsRanking
 
 
 nest_asyncio.apply()
